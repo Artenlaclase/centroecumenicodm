@@ -4,16 +4,16 @@ import logo from '../../assets/images/CEDM-Logo-1.png';
 
 <header
     x-data="{ mobileMenuOpen: false, productDropdownOpen: false }"
-    class="bg-gray-900 px-6 py-4 lg:px-8 fixed top-0 w-full z-50 shadow-md"
+    class="bg-amber-800/80 px-6 py-2 lg:px-8 fixed top-0 w-full z-50 shadow-md"
 >
     <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
         aria-label="Global"
     >
         <!-- Logo -->
         <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5">
-                <img class="h-16 w-auto" src={logo.src} alt="CEDM Logo" />
+                <img class="h-12 w-auto" src={logo.src} alt="CEDM Logo" />
             </a>
         </div>
 
@@ -41,13 +41,30 @@ import logo from '../../assets/images/CEDM-Logo-1.png';
 
         <!-- Menú desktop -->
         <div class="hidden lg:flex lg:gap-x-12 justify-center flex-1">
+             <!-- Otros links -->
+             <a
+             href="#"
+             class="text-sm font-semibold text-white hover:text-gray-300"
+             >Inicio</a
+         >
+         <a
+             href="#"
+             class="text-sm font-semibold text-white hover:text-gray-300"
+             >Quiénes Somos</a
+         >
+         <a
+             href="#"
+             class="text-sm font-semibold text-white hover:text-gray-300"
+             >Nuestra Misión</a
+         >
             <div class="relative" @click.outside="productDropdownOpen = false">
+                
                 <button
                     type="button"
                     @click="productDropdownOpen = !productDropdownOpen"
                     class="flex items-center gap-x-1 text-sm font-semibold text-white hover:text-gray-300"
                 >
-                    Producto
+                    Publicaciones
                     <svg
                         :class="{'rotate-180': productDropdownOpen}"
                         class="size-5 flex-none text-gray-300 transition-transform"
@@ -70,37 +87,37 @@ import logo from '../../assets/images/CEDM-Logo-1.png';
                     <a
                         href="#"
                         class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-                        >Analytics</a
+                        >Libros</a
                     >
                     <a
                         href="#"
                         class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-                        >Engagement</a
+                        >Pastoral Popular</a
                     >
                     <a
                         href="#"
                         class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-                        >Security</a
+                        >Nutram</a
+                    >
+                    <a
+                        href="#"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                        >Tópicos</a
+                    >
+                    <a
+                        href="#"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                        >Teología feminista</a
+                    >
+                    <a
+                        href="#"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                        >Material Educactivo</a
                     >
                 </div>
             </div>
 
-            <!-- Otros links -->
-            <a
-                href="#"
-                class="text-sm font-semibold text-white hover:text-gray-300"
-                >Features</a
-            >
-            <a
-                href="#"
-                class="text-sm font-semibold text-white hover:text-gray-300"
-                >Marketplace</a
-            >
-            <a
-                href="#"
-                class="text-sm font-semibold text-white hover:text-gray-300"
-                >Company</a
-            >
+           
         </div>
 
         <!-- Redes sociales -->
@@ -171,20 +188,47 @@ import logo from '../../assets/images/CEDM-Logo-1.png';
             <button
                 @click="productDropdownOpen = !productDropdownOpen"
                 class="w-full text-left font-semibold text-gray-900"
-                >Producto</button
+                >Publicaciones</button
             >
             <div
                 x-show="productDropdownOpen"
                 x-transition
                 class="mt-2 space-y-2"
             >
-                <a href="#" class="block text-sm text-gray-900">Analytics</a>
-                <a href="#" class="block text-sm text-gray-900">Engagement</a>
-                <a href="#" class="block text-sm text-gray-900">Security</a>
+            <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+            >Libros</a
+        >
+        <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+            >Pastoral Popular</a
+        >
+        <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+            >Nutram</a
+        >
+        <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+            >Tópicos</a
+        >
+        <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+            >Teología feminista</a
+        >
+        <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+            >Material Educactivo</a
+        >
             </div>
-            <a href="#" class="block mt-4 text-sm text-gray-900">Features</a>
-            <a href="#" class="block text-sm text-gray-900">Marketplace</a>
-            <a href="#" class="block text-sm text-gray-900">Company</a>
+            <a href="#" class="block mt-4 text-sm text-gray-900">Inicio</a>
+            <a href="#" class="block text-sm text-gray-900">Quiénes Somos</a>
+            <a href="#" class="block text-sm text-gray-900">Nuestra Misión</a>
 
             <div class="mt-6 flex justify-center space-x-6">
                 <a
@@ -194,9 +238,11 @@ import logo from '../../assets/images/CEDM-Logo-1.png';
                     class="text-gray-600 hover:text-blue-600 transition hover:scale-110"
                 >
                     <!-- SVG Facebook -->
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
-                        ><path d="..."></path></svg
-                    >
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-3h2.4V9c0-2.4 1.4-3.7 3.5-3.7 1 0 2 .2 2 .2v2.3h-1.1c-1.1 0-1.4.7-1.4 1.4v1.7h2.7l-.4 3h-2.3v7A10 10 0 0022 12z">
+
+                        </path>
+                    </svg>
                 </a>
                 <a
                     href="https://www.instagram.com/cdiegodemedellin/"
@@ -205,9 +251,10 @@ import logo from '../../assets/images/CEDM-Logo-1.png';
                     class="text-gray-600 hover:text-pink-500 transition hover:scale-110"
                 >
                     <!-- SVG Instagram -->
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
-                        ><path d="..."></path></svg
-                    >
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7.5 2h9A5.5 5.5 0 0122 7.5v9a5.5 5.5 0 01-5.5 5.5h-9A5.5 5.5 0 012 16.5v-9A5.5 5.5 0 017.5 2zm0 2A3.5 3.5 0 004 7.5v9A3.5 3.5 0 007.5 20h9a3.5 3.5 0 003.5-3.5v-9A3.5 3.5 0 0016.5 4h-9zm9 2a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z">
+                        </path>
+                    </svg>
                 </a>
                 <a
                     href="https://www.youtube.com/@CentroMedellin"
@@ -216,9 +263,11 @@ import logo from '../../assets/images/CEDM-Logo-1.png';
                     class="text-gray-600 hover:text-red-600 transition hover:scale-110"
                 >
                     <!-- SVG YouTube -->
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
-                        ><path d="..."></path></svg
-                    >
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21.8 8s-.2-1.4-.8-2A2.8 2.8 0 0019 5.2C17.1 5 12 5 12 5s-5.1 0-7 .2a2.8 2.8 0 00-2 1.8C2.4 8 2.2 9.4 2.2 9.4S2 10.9 2 12.3v1.4c0 1.4.2 2.9.2 2.9s.2 1.4.8 2a2.8 2.8 0 002 .8c1.9.2 7 .2 7 .2s5.1 0 7-.2a2.8 2.8 0 002-.8c.6-.6.8-2 .8-2s.2-1.5.2-2.9v-1.4c0-1.4-.2-2.9-.2-2.9zM10 15V9.7l5.6 2.6L10 15z">
+
+                        </path>
+                    </svg>
                 </a>
             </div>
         </div>
