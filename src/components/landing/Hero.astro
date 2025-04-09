@@ -4,14 +4,14 @@ import heroImage from '../../assets/images/plantando.webp';
 const imageUrl = encodeURI(heroImage.src.split('?')[0]);
 ---
 <section
-  class="relative bg-cover bg-center bg-no-repeat min-h-screen pt-[64px] lg:pt-[72px]"
+  class="relative bg-cover bg-center bg-no-repeat min-h-screen"
   style={`background-image: url('${imageUrl}'); background-size: cover;`}
 >
   <!-- Overlay oscuro -->
   <div class="absolute inset-0 bg-black/50 z-10"></div>
 
-  <!-- Contenedor principal: Ocupa toda la altura y centra el contenido al 50% desde abajo -->
-  <div class="relative z-20 h-[calc(100vh-64px)] lg:h-[calc(100vh-72px)] flex items-end justify-center pb-[50vh]">
+  <!-- Contenedor principal: Empieza después del navbar (navbar height = 64px o 72px en lg) -->
+  <div class="relative z-20 h-[calc(100vh-64px)] lg:h-[calc(100vh-72px)] flex items-end justify-center pb-[50vh] pt-[64px] lg:pt-[72px]">
     <div class="w-full max-w-screen-xl px-4 mx-auto text-white text-center">
       <h1 class="max-w-2xl mx-auto mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
         Centro Ecuménico Diego de Medellín
